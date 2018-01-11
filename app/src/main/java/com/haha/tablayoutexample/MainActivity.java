@@ -8,8 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements First.OnFragmentInteractionListener,
         Second.OnFragmentInteractionListener,Third.OnFragmentInteractionListener{
-    ViewPager mViewPaper;
-    TabLayout mTabLayout;
+    private ViewPager mViewPaper;
+    private TabLayout mTabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

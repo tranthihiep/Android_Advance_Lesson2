@@ -11,26 +11,25 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 public class AdapterViewPaper extends FragmentStatePagerAdapter {
 
-    int mTab;
+    private int mTab;
     public AdapterViewPaper(FragmentManager fm, int mTab) {
         super(fm);
         this.mTab = mTab;
     }
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                First first = new First();
-                return first;
-            case 1:
-                Second second = new Second();
-                return second;
-            case 2:
-                Third third = new Third();
-                return third;
-            default: return null;
-
-        }
+            Fragment frag =null;
+            switch (position){
+                case 0:
+                    frag=new First();
+                    break;
+                case 1:
+                    frag=new Second();
+                    break;
+                case 2:
+                    frag=new Third();
+                    break;
+        } return frag;
     }
     @Override
     public int getCount() {
